@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700&family=Raleway:wght@400;600;700;900&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <!-- you are using google APIs, you should use google icons instead of Font Awesome. -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="menu_bar">
+        <h1 class="logo">HMN</h1>
+        <ul>
+            <li>
+                <a href="#">Find Handyman <span class="material-symbols-outlined">
+                        expand_more
+                    </span>
+                </a>
+                <ul class="dropdown_menu">
+                    <li> <a href="#">Post job & hire</a></li>
+                    <li>
+                        <a href="#">Browse Handyman Profiles & book
+                            <span class="material-symbols-outlined">
+                                expand_more
+                            </span>
+                        </a>
+                        <ul class="dropdown_menu-1">
+                            <li>
+                                <a href="#">Carpenter</a>
+                            </li>
+                            <li>
+                                <a href="#">Plumber</a>
+                            </li>
+                            <li>
+                                <a href="#">Mechanic</a>
+                            </li>
+                            <li>
+                                <a href="#">Generator Repairer</a>
+                            </li>
+                            <li>
+                                <a href="#">Driver</a>
+                            </li>
+                            <li>
+                                <a href="#">Chef</a>
+                            </li>
+                            <li>
+                                <a href="#">Electrician</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Find Tasks
+                    <span class="material-symbols-outlined">
+                        expand_more
+                    </span>
+                </a>
+                <ul class="dropdown_menu">
+                    <li>
+                        <a href="#">Create Handyman profile</a>
+                    </li>
+                    <li>
+                        <a href="#">View open tasks</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Login</a>
+            </li>
+            <li>
+                <a href="#" class="btn orange">Register</a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // you can write this code in JS file. I'm writeing here for the sake of not creating new file.
+        $(document).ready(function(){
+            $('.menu_bar ul li').click(function(){
+                $(this).find('.dropdown_menu').slideToggle(200);
+                $(this).find('a span').toggleClass('expand_icon');
+            });
+            $('span').removeClass('expand_icon');
+            $('ul.dropdown_menu li').click(function(){
+                $(this).find('.dropdown_menu-1').slideToggle(200);
+                $(this).find('span').toggleClass('expand_icon');
+            });
+        });
+    </script>
+</body>
+
+</html>
