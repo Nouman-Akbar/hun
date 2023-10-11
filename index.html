@@ -19,83 +19,86 @@
     <div class="menu_bar">
         <h1 class="logo">HMN</h1>
         <ul>
-            <li>
-                <a href="#">Find Handyman <span class="material-symbols-outlined">
+            <li class="submenu_anchor">
+                <span>Find Handyman <span class="material-symbols-outlined">
                         expand_more
                     </span>
-                </a>
+                </span>
                 <ul class="dropdown_menu">
-                    <li> <a href="#">Post job & hire</a></li>
-                    <li>
-                        <a href="#">Browse Handyman Profiles & book
+                    <li> <span>Post job & hire</span></li>
+                    <li class="submenu_anchor2">
+                        <span>Browse Handyman Profiles & book
                             <span class="material-symbols-outlined">
                                 expand_more
                             </span>
-                        </a>
+                        </span>
                         <ul class="dropdown_menu-1">
                             <li>
-                                <a href="#">Carpenter</a>
+                                <span>Carpenter</span>
                             </li>
                             <li>
-                                <a href="#">Plumber</a>
+                                <span>Plumber</span>
                             </li>
                             <li>
-                                <a href="#">Mechanic</a>
+                                <span>Mechanic</span>
                             </li>
                             <li>
-                                <a href="#">Generator Repairer</a>
+                                <span>Generator Repairer</span>
                             </li>
                             <li>
-                                <a href="#">Driver</a>
+                                <span>Driver</span>
                             </li>
                             <li>
-                                <a href="#">Chef</a>
+                                <span>Chef</span>
                             </li>
                             <li>
-                                <a href="#">Electrician</a>
+                                <span>Electrician</span>
                             </li>
                         </ul>
                     </li>
                 </ul>
             </li>
-            <li><a href="#">Find Tasks
+            <li class="submenu_anchor">
+                <span>Find Tasks
                     <span class="material-symbols-outlined">
                         expand_more
                     </span>
-                </a>
+                </span>
                 <ul class="dropdown_menu">
                     <li>
-                        <a href="#">Create Handyman profile</a>
+                        <span>Create Handyman profile</span>
                     </li>
                     <li>
-                        <a href="#">View open tasks</a>
+                        <span>View open tasks</span>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="#">Login</a>
+                <span>Login</span>
             </li>
             <li>
-                <a href="#" class="btn orange">Register</a>
+                <span class="btn orange">Register</span>
             </li>
         </ul>
     </div>
-
-    <script src="main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.js"></script>
     <script>
         // you can write this code in JS file. I'm writeing here for the sake of not creating new file.
-        $(document).ready(function(){
-            $('.menu_bar ul li').click(function(){
-                $(this).find('.dropdown_menu').slideToggle(200);
-                $(this).find('a span').toggleClass('expand_icon');
+        $(document).ready(function () {
+            $('.submenu_anchor').click(function () {
+                $('.dropdown_menu').slideToggle(200);
+                $(this).find('.material-symbols-outlined').toggleClass('expand_icon');
             });
-            $('span').removeClass('expand_icon');
-            $('ul.dropdown_menu li').click(function(){
+
+            $('.submenu_anchor2').click(function () {
                 $(this).find('.dropdown_menu-1').slideToggle(200);
-                $(this).find('span').toggleClass('expand_icon');
+                $(this).find('.material-symbols-outlined').toggleClass('expand_icon');
             });
+
+            // Remove the expand_icon class from all .material-symbols-outlined elements
+            $('.material-symbols-outlined').removeClass('expand_icon');
         });
+        // $(document).ready()
     </script>
 </body>
 
