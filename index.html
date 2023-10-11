@@ -24,47 +24,47 @@
                         expand_more
                     </span>
                 </span>
-                <ul class="dropdown_menu">
-                    <li> <span>Post job & hire</span></li>
-                    <li class="submenu_anchor2">
-                        <span>Browse Handyman Profiles & book
-                            <span class="material-symbols-outlined">
-                                expand_more
-                            </span>
-                        </span>
-                        <ul class="dropdown_menu-1">
-                            <li>
-                                <span>Carpenter</span>
-                            </li>
-                            <li>
-                                <span>Plumber</span>
-                            </li>
-                            <li>
-                                <span>Mechanic</span>
-                            </li>
-                            <li>
-                                <span>Generator Repairer</span>
-                            </li>
-                            <li>
-                                <span>Driver</span>
-                            </li>
-                            <li>
-                                <span>Chef</span>
-                            </li>
-                            <li>
-                                <span>Electrician</span>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
             </li>
-            <li class="submenu_anchor">
+            <ul class="dropdown_menu">
+                <li> <span>Post job & hire</span></li>
+                <li class="submenu_anchor2">
+                    <span>Browse Handyman Profiles & book
+                        <span class="material-symbols-outlined">
+                            expand_more
+                        </span>
+                    </span>
+                    <ul class="dropdown_menu-1">
+                        <li>
+                            <span>Carpenter</span>
+                        </li>
+                        <li>
+                            <span>Plumber</span>
+                        </li>
+                        <li>
+                            <span>Mechanic</span>
+                        </li>
+                        <li>
+                            <span>Generator Repairer</span>
+                        </li>
+                        <li>
+                            <span>Driver</span>
+                        </li>
+                        <li>
+                            <span>Chef</span>
+                        </li>
+                        <li>
+                            <span>Electrician</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <li class="submenu_anchor3">
                 <span>Find Tasks
                     <span class="material-symbols-outlined">
                         expand_more
                     </span>
                 </span>
-                <ul class="dropdown_menu">
+                <ul class="dropdown_menu2">
                     <li>
                         <span>Create Handyman profile</span>
                     </li>
@@ -81,7 +81,7 @@
             </li>
         </ul>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         // you can write this code in JS file. I'm writeing here for the sake of not creating new file.
         $(document).ready(function () {
@@ -89,14 +89,15 @@
                 $('.dropdown_menu').slideToggle(200);
                 $(this).find('.material-symbols-outlined').toggleClass('expand_icon');
             });
-
-            $('.submenu_anchor2').click(function () {
-                $(this).find('.dropdown_menu-1').slideToggle(200);
+            $('.submenu_anchor3').click(function () {
+                $('.dropdown_menu2').slideToggle(200);
                 $(this).find('.material-symbols-outlined').toggleClass('expand_icon');
             });
-
-            // Remove the expand_icon class from all .material-symbols-outlined elements
             $('.material-symbols-outlined').removeClass('expand_icon');
+            $('.submenu_anchor2').click(function () {
+                $('.dropdown_menu-1').slideToggle(200);
+                $(this).find('.material-symbols-outlined').toggleClass('expand_icon');
+            });
         });
         // $(document).ready()
     </script>
